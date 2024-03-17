@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Project tracking intro component</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+
+  <!-- NavBar Starts Here -->
+  <nav>
+    <div class="navbar_logo">
+      <img src="./images/logo.svg" alt="logo">
+    </div>
+    <div class="navbar_menu">
+      <ul>
+        <a href="#">
+          <li>Product</li>
+        </a>
+        <a href="#">
+          <li>Features</li>
+        </a>
+        <a href="#">
+          <li>Pricing</li>
+        </a>
+      </ul>
+      <a href="#" class="login">
+        <li>Login</li>
+      </a>
+
+    </div>
+    <!-- Mobile Navbar -->
+    <button class="menu-toggle">
+      <span class="menu-icon menu-icon--open">
+        <img src="./images/icon-hamburger.svg" alt="open">
+      </span> <span class="menu-icon menu-icon--close">
+        <img src="./images/icon-close.svg" alt="close">
+      </span>
+    </button>
+  </nav>
+  <!-- NavBar Ends Here -->
+
+
+  <!-- Hero Starts Here -->
+  <section class="hero">
+    <div class="hero_content">
+      <h3><span>NEW</span> Monograph Dashboard</h3>
+      <h1>
+        Powerful insights <br /> into your team
+      </h1>
+      <p>
+        Project planning and time tracking <br /> for agile teams
+      </p>
+
+      <div class="buttons">
+        <a href="#" class="demo">
+          Schedule a demo
+        </a>
+        <a href="#" class="preview">
+          to see a live preview
+        </a>
+      </div>
+
+    </div>
+    <div class="hero_img__group">
+      <img src="./images/illustration-devices.svg" alt="bg_image" />
+    </div>
+  </section>
+  <!-- Hero Ends Here -->
+
+  <!-- Footer Starts Here -->
+  <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">Rohit Dubey</a>.
+    </p>
+  </footer>
+  <!-- Footer Ends Here -->
+
+  <script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const menu = document.querySelector('.navbar_menu');
+
+    menuToggle.addEventListener('click', () => {
+      menu.classList.toggle('show'); // Add or remove 'show' class for visibility
+
+      // Optionally, toggle menu icons based on visibility
+      const openIcon = document.querySelector('.menu-icon--open');
+      const closeIcon = document.querySelector('.menu-icon--close');
+      if (menu.classList.contains('show')) {
+        openIcon.style.display = 'none';
+        closeIcon.style.display = 'block';
+      } else {
+        openIcon.style.display = 'block';
+        closeIcon.style.display = 'none';
+      }
+    });
+
+  </script>
+</body>
+
+</html>
